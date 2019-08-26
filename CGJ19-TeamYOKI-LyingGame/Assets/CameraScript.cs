@@ -7,6 +7,7 @@ public class CameraScript : MonoBehaviour
 
     public bool followPlayer = true;
     public GameObject target;
+    public Vector3 offset;
 
     void LateUpdate()
     {
@@ -21,7 +22,6 @@ public class CameraScript : MonoBehaviour
     {
         Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lerpedPos = Vector2.Lerp(target.transform.position, targetPos, 0.05f);
-        transform.position = new Vector3(lerpedPos.x, lerpedPos.y, -10);
+        transform.position = new Vector3(lerpedPos.x, lerpedPos.y, -10) + offset;
     }
-
 }

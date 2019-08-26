@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 374692884}
   - component: {fileID: 374692885}
   - component: {fileID: 374692886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gialtro
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3529,7 +3529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584101307}
   - component: {fileID: 584101308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3840,8 +3840,8 @@ GameObject:
   - component: {fileID: 1447868005}
   - component: {fileID: 1447868007}
   - component: {fileID: 1447868006}
-  m_Layer: 0
-  m_Name: Grass
+  m_Layer: 13
+  m_Name: DugOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7080,7 +7080,7 @@ GameObject:
   - component: {fileID: 1571256318}
   - component: {fileID: 1571256319}
   - component: {fileID: 1571256320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7205,7 +7205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618141180}
   - component: {fileID: 1618141181}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7348,11 +7348,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 344917159839774618, guid: 87536aecfa13ac5499b1d55a522052e0,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87536aecfa13ac5499b1d55a522052e0, type: 3}
 --- !u!1 &2078416541
@@ -7369,7 +7364,7 @@ GameObject:
   - component: {fileID: 2078416547}
   - component: {fileID: 2078416546}
   - component: {fileID: 2078416545}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Walls
   m_TagString: Facade
   m_Icon: {fileID: 0}
@@ -19343,6 +19338,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 3, y: 4, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 4, y: 4, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 5, y: 4, z: 0}
     second:
       m_TileIndex: 0
@@ -23980,7 +23993,7 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 329
+  - m_RefCount: 331
     m_Data: {fileID: 11400000, guid: 8ff42235f32d4384b94f2b7c175be575, type: 2}
   - m_RefCount: 35
     m_Data: {fileID: 11400000, guid: e9248b99ab610f548bec8d529e8de5c3, type: 2}
@@ -23989,7 +24002,7 @@ Tilemap:
   - m_RefCount: 1473
     m_Data: {fileID: 11400000, guid: 272677f313125ee4f99990bb7a1c3d7a, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 329
+  - m_RefCount: 331
     m_Data: {fileID: 1484690341983530666, guid: c5dcdb55eab2f2b419610a3a75bca4ac,
       type: 3}
   - m_RefCount: 35
@@ -24001,7 +24014,7 @@ Tilemap:
     m_Data: {fileID: -6200451716699907878, guid: c5dcdb55eab2f2b419610a3a75bca4ac,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1837
+  - m_RefCount: 1839
     m_Data:
       e00: 1
       e01: 0
@@ -24020,7 +24033,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1837
+  - m_RefCount: 1839
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -24065,44 +24078,44 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 2078416547}
     m_ColliderPaths:
-    - - X: 370000012
-        Y: -190000100
-      - X: 369999983
-        Y: 120000100
-      - X: -320000100
-        Y: 119999954
-      - X: -320000012
-        Y: -190000100
-    - - X: 199999668
-        Y: -59999407
-      - X: -169999949
-        Y: -59998102
-      - X: -169997841
-        Y: 19999990
-      - X: 29999710
-        Y: 20002088
-      - X: 30002378
-        Y: 50000000
-      - X: 50000000
-        Y: 49997622
-      - X: 50002378
+    - - X: 369999971
+        Y: -190000000
+      - X: 369999971
+        Y: 120000000
+      - X: -320000000
+        Y: 119999971
+      - X: -319999971
+        Y: -190000000
+    - - X: 200000000
+        Y: -59999971
+      - X: -170000000
+        Y: -59999971
+      - X: -169999971
         Y: 20000000
-      - X: 199999900
-        Y: 19999495
+      - X: 30000000
+        Y: 20000029
+      - X: 30000029
+        Y: 40000000
+      - X: 50000000
+        Y: 39999971
+      - X: 50000029
+        Y: 20000000
+      - X: 200000000
+        Y: 19999971
   m_CompositePaths:
     m_Paths:
-    - - {x: 36.999996, y: -19.00001}
-      - {x: 36.999996, y: 12.00001}
-      - {x: -32.00001, y: 11.999993}
-      - {x: -31.999998, y: -19.00001}
-    - - {x: 19.999968, y: -5.9999375}
-      - {x: -16.999996, y: -5.9998074}
-      - {x: -16.99978, y: 1.999999}
-      - {x: 2.9999712, y: 2.0002117}
-      - {x: 3.0002408, y: 5}
-      - {x: 5, y: 4.999759}
-      - {x: 5.000241, y: 2}
-      - {x: 19.99999, y: 1.9999466}
+    - - {x: 36.999992, y: -19}
+      - {x: 36.999992, y: 12}
+      - {x: -32, y: 11.999994}
+      - {x: -31.999994, y: -19}
+    - - {x: 20, y: -5.9999943}
+      - {x: -17, y: -5.9999943}
+      - {x: -16.999994, y: 2}
+      - {x: 3, y: 2.0000057}
+      - {x: 3.0000057, y: 4}
+      - {x: 5, y: 3.9999945}
+      - {x: 5.0000057, y: 2}
+      - {x: 20, y: 1.9999943}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
 --- !u!50 &2078416546
@@ -24283,6 +24296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 344917159839774618, guid: 87536aecfa13ac5499b1d55a522052e0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87536aecfa13ac5499b1d55a522052e0, type: 3}

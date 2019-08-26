@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
     {
         GameObject _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0)*1.5f + transform.position), Quaternion.identity);
         _bullet.GetComponent<Bullet>().targetDir = _dir;
+        GameManager.instance.ShakeCamera(2f, 5);
     }
 
     void UpdateMovement()

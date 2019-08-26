@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 344917159839774621}
   - component: {fileID: 344917159839774622}
   - component: {fileID: 344917159839774623}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GrassObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344917159839774616}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -440938545
   m_SortingLayer: 4
-  m_SortingOrder: -50
+  m_SortingOrder: 0
   m_Sprite: {fileID: -4255866100116475298, guid: 8cb51b02d50adb64fb75977ca37ced8f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

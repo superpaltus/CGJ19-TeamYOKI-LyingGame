@@ -12,4 +12,12 @@ public class Bullet : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().AddForce(targetDir*60, ForceMode2D.Impulse);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
