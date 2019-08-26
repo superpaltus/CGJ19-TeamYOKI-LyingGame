@@ -29,6 +29,75 @@ TextureImporter:
   - first:
       213: 1212715175621427163
     second: GialtroSpriteSheet_8
+  - first:
+      213: 8599759991756341413
+    second: GialtroSpriteSheet_9
+  - first:
+      213: 8686633225164747273
+    second: GialtroSpriteSheet_10
+  - first:
+      213: 3396350869829660564
+    second: GialtroSpriteSheet_11
+  - first:
+      213: 2006821957664986430
+    second: GialtroSpriteSheet_12
+  - first:
+      213: -2367059989292532846
+    second: GialtroSpriteSheet_13
+  - first:
+      213: 2770183759378164269
+    second: GialtroSpriteSheet_14
+  - first:
+      213: 8122104264299080430
+    second: GialtroSpriteSheet_15
+  - first:
+      213: -4626477267719558037
+    second: GialtroSpriteSheet_16
+  - first:
+      213: -2324287500246387729
+    second: GialtroSpriteSheet_17
+  - first:
+      213: 4853040493774881818
+    second: GialtroSpriteSheet_18
+  - first:
+      213: 739288786609100041
+    second: GialtroSpriteSheet_19
+  - first:
+      213: -6418802351076498680
+    second: GialtroSpriteSheet_20
+  - first:
+      213: -2576252762681974196
+    second: GialtroSpriteSheet_21
+  - first:
+      213: -4044974045567601906
+    second: GialtroSpriteSheet_22
+  - first:
+      213: 7011123188436576446
+    second: GialtroSpriteSheet_23
+  - first:
+      213: -925926022543222362
+    second: GialtroSpriteSheet_24
+  - first:
+      213: 6592734925027767953
+    second: GialtroSpriteSheet_25
+  - first:
+      213: 5365663502399736312
+    second: GialtroSpriteSheet_26
+  - first:
+      213: -5967432845217095611
+    second: GialtroSpriteSheet_27
+  - first:
+      213: 4217425210429192900
+    second: GialtroSpriteSheet_28
+  - first:
+      213: 1025138144780557256
+    second: GialtroSpriteSheet_29
+  - first:
+      213: -4944090696952581261
+    second: GialtroSpriteSheet_30
+  - first:
+      213: -5638740787130854889
+    second: GialtroSpriteSheet_31
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -151,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3bbd33123e9f9f4da0606066df1140c
+      spriteID: b1073bad998caa7409e57118bb4f9942
       internalID: 3044274226523371268
       vertices: []
       indices: 
@@ -172,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbd1bab6d136da47be4cc5b963b8f28
+      spriteID: 21b9fa3930d17b94186cf61eaa1c4776
       internalID: 5858290449872729137
       vertices: []
       indices: 
@@ -193,7 +262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e8eca54cc71e746a692361a41496e3
+      spriteID: 57a004cc70ead774e8b6d91d826628fc
       internalID: 6059364874178962847
       vertices: []
       indices: 
@@ -214,7 +283,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b705b52646fe7e45bd83b62a1f54965
+      spriteID: 56447ed9b7e130745bef02d82071aea7
       internalID: 6470307464069769315
       vertices: []
       indices: 
@@ -235,7 +304,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b636b8225ba31244bb97eeec4f7b5f70
+      spriteID: 059f79f319eda5549865066145cd3e67
       internalID: -2360811983339113444
       vertices: []
       indices: 
@@ -256,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5eabe63ed3c4d545ba61ddda0ba24b9
+      spriteID: c23bad59f4144a34693509bb43de0a83
       internalID: -5817118096105953571
       vertices: []
       indices: 
@@ -277,7 +346,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65a08221f6d37004c9b6673c1522857c
+      spriteID: 9ab40fcfcd48c404bb9106fc99f247dd
       internalID: 5762315007681563427
       vertices: []
       indices: 
@@ -298,7 +367,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d073ef13798d02545a58358f7514506d
+      spriteID: 21ecaa581c156aa49b62ec90fda742a6
       internalID: -8205149539684614211
       vertices: []
       indices: 
@@ -308,8 +377,8 @@ TextureImporter:
       name: GialtroSpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 480
+        x: 0
+        y: 448
         width: 32
         height: 32
       alignment: 7
@@ -319,8 +388,491 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4e509fa5bf60d42b75974d367e33c8
+      spriteID: 1b680e46ff3bc334790efa3ad6438fe7
       internalID: 1212715175621427163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc4ff6e9f583854e9d0d6b9cdcee674
+      internalID: 8599759991756341413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca13dafbdd225ef438068e54bdab39e8
+      internalID: 8686633225164747273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7532c04bebdbfb4ebdf5abe92e32132
+      internalID: 3396350869829660564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572447adfa1334646b57b533b37dfb23
+      internalID: 2006821957664986430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211837fc1f6f1ed4a80d08d68dd0bfb4
+      internalID: -2367059989292532846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fbb5b49d6619d4da0979682a01dac2
+      internalID: 2770183759378164269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185405334c08c7442b1d13747c0aff1f
+      internalID: 8122104264299080430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078382020c132e34b887755da4084a01
+      internalID: -4626477267719558037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da716f9c1d7c974299c6408482aa169
+      internalID: -2324287500246387729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614d4ee36ce1e46408cd0b4a8f23005b
+      internalID: 4853040493774881818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fca64ed03eb5ab4ca389882f4425bff
+      internalID: 739288786609100041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27fb358f34a31f45b9c4f609d9ea4b5
+      internalID: -6418802351076498680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e957ba419aca0424b93482475cdfdd80
+      internalID: -2576252762681974196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc165fd2316bf4408095b098a505835
+      internalID: -4044974045567601906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279f655c43c40104d9dddf8714f594e3
+      internalID: 7011123188436576446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e773e353c8e2e418b88c3959bfebe9
+      internalID: -925926022543222362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ceb46fe5cbe40468a27dad22fb028e
+      internalID: 6592734925027767953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed5113a1882cd5438a998be4570047b
+      internalID: 5365663502399736312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d5171abbb94ec4b8dccc9cf0074e10
+      internalID: -5967432845217095611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd5baa80741dcf4183d62283b34a751
+      internalID: 4217425210429192900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ed459bc024c72419f8ef11fcadc7d1
+      internalID: 1025138144780557256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d22e3454600134bbd03f0f5fbb5194
+      internalID: -4944090696952581261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GialtroSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15746177e0c2b8447bf5db9427f8d168
+      internalID: -5638740787130854889
       vertices: []
       indices: 
       edges: []

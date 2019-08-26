@@ -20,7 +20,7 @@ public class CameraScript : MonoBehaviour
     void UpdateCameraPosition()
     {
         Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 lerpedPos = Vector2.Lerp(target.transform.position, targetPos, 0.1f);
+        Vector2 lerpedPos = Vector2.Lerp(target.transform.position, targetPos, 0.05f);
         transform.position = new Vector3(lerpedPos.x, lerpedPos.y, -10);
     }
 

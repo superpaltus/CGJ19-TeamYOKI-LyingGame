@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Facade
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -13,12 +15,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - PlayerBullet
+  - Player
+  - Enemies
+  - EnemyBullets
+  - Obstacles
   - 
   - 
   - 
@@ -40,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BelowFloor
+    uniqueID: 1001493021
+    locked: 0
+  - name: Floor
+    uniqueID: 2596253147
+    locked: 0
+  - name: OnFloor
+    uniqueID: 1383053661
+    locked: 0
+  - name: Player
+    uniqueID: 3854028751
+    locked: 0
+  - name: AbovePlayer
+    uniqueID: 641454599
+    locked: 0
+  - name: WayAbovePlayer
+    uniqueID: 2944985139
+    locked: 0
+  - name: UI
+    uniqueID: 1482695887
     locked: 0
