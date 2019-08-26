@@ -54,16 +54,16 @@ public class GameManager : MonoBehaviour
 
     public void ShakeCamera(float _amount, float _time, Vector2 _dir = new Vector2())
     {
-        if(_dir == Vector2.zero)
-        {
-            _dir = new Vector2(Random.Range(-_amount, _amount), Random.Range(-_amount, _amount));
-        }
-        shakePoint = _dir * _amount;
-        lastShakeTime = _time;
-        shakeTime = _time;
-        Camera.main.transform.GetComponent<CameraScript>().offset = _dir;
-        Camera.main.transform.GetComponent<CameraScript>().offset = -_dir;
-        Camera.main.transform.GetComponent<CameraScript>().offset = Vector2.zero;
+        //if(_dir == Vector2.zero)
+        //{
+        //    _dir = new Vector2(Random.Range(-_amount, _amount), Random.Range(-_amount, _amount));
+        //}
+        //shakePoint = _dir * _amount;
+        //lastShakeTime = _time;
+        //shakeTime = _time;
+        //Camera.main.transform.GetComponent<CameraScript>().offset = _dir;
+        //Camera.main.transform.GetComponent<CameraScript>().offset = -_dir;
+        //Camera.main.transform.GetComponent<CameraScript>().offset = Vector2.zero;
 
     }
 
