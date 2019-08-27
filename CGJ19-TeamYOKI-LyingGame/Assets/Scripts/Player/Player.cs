@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     public GameObject playerBullet;
     public GameObject playerBulletRailGun;
+    public GameObject playerGrenade;
     [Range(0f,1f)]
     public float bulletSpeed = 0.5f;
 
@@ -47,6 +48,11 @@ public class Player : MonoBehaviour
     private bool isMachinegunAttacking = false;
     private bool isWeaponReloading = false;
 
+    public enum Ability
+    {
+        Grenade,
+    }
+    public Ability myAbility = Ability.Grenade;
 
     // ===UNITY FUNCTIONS===
 
@@ -63,6 +69,7 @@ public class Player : MonoBehaviour
         UpdateMovement();
         RigidMove();
         CheckForAttack();
+        CheckForAbilityUse();
     }
 
 
@@ -70,6 +77,26 @@ public class Player : MonoBehaviour
 
     // ===OTHER FUNCTIONS===
 
+    void CheckForAbilityUse()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Vector2 shootDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            if (myAbility == Ability.Grenade)
+            {
+                GrenadeThrow(shootDirection);
+                return;
+            }
+        }
+    }
+
+    void GrenadeThrow(Vector2 _dir)
+    {
+        GameObject _grenade = Instantiate(playerGrenade, (new Vector3(_dir.x, _dir.y, 0) * 1.5f + transform.position), Quaternion.identity);
+        Grenade _grenadeProp = _grenade.GetComponent<Grenade>();
+        _grenadeProp.targetDir = _dir.normalized * bulletSpeed;
+        GameManager.instance.ShakeCamera(2f, 5);
+    }
 
     void CheckForAttack()
     {
