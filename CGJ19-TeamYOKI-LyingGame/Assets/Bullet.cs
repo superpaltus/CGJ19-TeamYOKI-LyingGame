@@ -5,12 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
+    public float bulletLifeTime = 3f;
+
     public Vector2 targetDir;
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody2D>().AddForce(targetDir*60, ForceMode2D.Impulse);
+        GetComponent<Rigidbody2D>().AddForce(targetDir * 60, ForceMode2D.Impulse);
+        BulletLifeTimeDecrease();
+    }
+
+    private void BulletLifeTimeDecrease()
+    {
+        bulletLifeTime -= Time.deltaTime;
+        if (bulletLifeTime <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
