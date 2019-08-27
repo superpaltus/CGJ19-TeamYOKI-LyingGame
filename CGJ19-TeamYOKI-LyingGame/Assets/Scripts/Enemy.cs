@@ -4,78 +4,78 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    // COMMENTED BECAUSE THIS DOES NOT WORK PROPERLY
+    ////Private Variables
+    //private GameObject player;
+    //private float timeToAttack;
+    //private LayerMask playerLayer;          //Player Layer == Player
 
-    //Private Variables
-    private GameObject player;
-    private float timeToAttack;
-    private LayerMask playerLayer;          //Player Layer == Player
+
+    ////Public variables
+    //[Range(.1f, 3f)]
+    //public float allowedDis;                //How close the enemy can get
+
+    //[Range(0f, 5f)]
+    //public float speed = 3f;               
+
+    //[Range(0.2f, 2f)]
+    //public float damageFreq = 2f;           //How fast enemy can attack
+    //public float damagePower;
+
+    //[Range(.5f, 4f)]
+    //public float attackRange;               //Range of it's attack
 
 
-    //Public variables
-    [Range(.1f, 3f)]
-    public float allowedDis;                //How close the enemy can get
 
-    [Range(0f, 5f)]
-    public float speed = 3f;               
-    
-    [Range(0.2f, 2f)]
-    public float damageFreq = 2f;           //How fast enemy can attack
-    public float damagePower;
+    //void Start()
+    //{
+    //    player = GameObject.FindWithTag("Player");   
+    //    playerLayer = LayerMask.GetMask("Player");
+    //}
 
-    [Range(.5f, 4f)]
-    public float attackRange;               //Range of it's attack
 
-    
+    //void Update()
+    //{
+    //    canFollow();
+    //}
 
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player");   
-        playerLayer = LayerMask.GetMask("Player");
-    }
+    ////Follow logic
+    //void canFollow ()
+    //{
+    //    if(Vector2.Distance(transform.position, player.transform.position) > allowedDis)
+    //    {
+    //        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    //    }
 
-   
-    void Update()
-    {
-        canFollow();
-    }
+    //    else
+    //    {
+    //        attack();
+    //    }
+    //}
 
-    //Follow logic
-    void canFollow ()
-    {
-        if(Vector2.Distance(transform.position, player.transform.position) > allowedDis)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        }
+    //void attack()
+    //{
+    //    if(timeToAttack <= 0)
+    //    {
+    //        timeToAttack = damageFreq;
+    //        Collider2D[] damage = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
 
-        else
-        {
-            attack();
-        }
-    }
+    //        for (int i = 0; i < damage.Length; i++)
+    //        {
+    //            damage[i].GetComponent<Player>().TakeDamage(damagePower);
+    //        }
+    //    }
 
-    void attack()
-    {
-        if(timeToAttack <= 0)
-        {
-            timeToAttack = damageFreq;
-            Collider2D[] damage = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
+    //    else
+    //    {
+    //       timeToAttack -= Time.deltaTime;
+    //    }
 
-            for (int i = 0; i < damage.Length; i++)
-            {
-                damage[i].GetComponent<Player>().TakeDamage(damagePower);
-            }
-        }
+    //}
 
-        else
-        {
-           timeToAttack -= Time.deltaTime;
-        }
-
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);        
-    }
+    //void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(transform.position, attackRange);        
+    //}
 }

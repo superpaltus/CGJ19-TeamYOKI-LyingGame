@@ -102,6 +102,12 @@ public class Player : MonoBehaviour
     {
         if (isWeaponReloading) return;
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            isWeaponReloading = true;
+            StartCoroutine(ReloadingWeapon());
+        }
+
         if (Input.GetButtonDown("Shoot"))
         {
             Vector2 shootDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
