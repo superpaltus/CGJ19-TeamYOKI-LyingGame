@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float moveSpeed;
 
     public GameObject playerBullet;
+    [Range(0f,1f)]
+    public float bulletSpeed = 0.5f;
 
     float inputX, inputY;
     float lastMoveX, lastMoveY;
@@ -59,7 +61,7 @@ public class Player : MonoBehaviour
     void Attack(Vector2 _dir)
     {
         GameObject _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0)*1.5f + transform.position), Quaternion.identity);
-        _bullet.GetComponent<Bullet>().targetDir = _dir;
+        _bullet.GetComponent<Bullet>().targetDir = _dir.normalized * bulletSpeed;
         GameManager.instance.ShakeCamera(2f, 5);
     }
 
