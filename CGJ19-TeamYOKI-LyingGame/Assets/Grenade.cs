@@ -13,10 +13,12 @@ public class Grenade : MonoBehaviour
 
     void Update()
     {
+        transform.Rotate(0f, 0f, -flyingTimer * 50);
+
         if (flyingTimer > 0)
         {
             GetComponent<Rigidbody2D>().AddForce(targetDir * 30 * flyingTimer, ForceMode2D.Impulse);
-            flyingTimer -= Time.deltaTime;
+            flyingTimer = Mathf.Clamp(flyingTimer - Time.deltaTime, 0f, Mathf.Infinity);
         }
         else
         {
@@ -30,6 +32,7 @@ public class Grenade : MonoBehaviour
         if (grenadeLifeTime <= 0f)
         {
             // BOOM! example
+            GetComponent<SpriteRenderer>().enabled = false;
             var psEmitter = GetComponent<ParticleSystem>().emission;
             psEmitter.enabled = true;
             StartCoroutine (Destroying());
