@@ -732,8 +732,13 @@ MonoBehaviour:
   moveSpeed: 1
   playerBullet: {fileID: 2186889209596112907, guid: 8583c2655def8c64186cbd33562688cf,
     type: 3}
+  playerBulletRailGun: {fileID: 2186889209596112907, guid: 932f62fe9962b4f4980a0670f4d29b6e,
+    type: 3}
   bulletSpeed: 0.5
   myWeapon: 1
+  ammo: 5
+  fullAmmo: 5
+  reloadWeaponTime: 3
 --- !u!95 &374692884
 Animator:
   serializedVersion: 3

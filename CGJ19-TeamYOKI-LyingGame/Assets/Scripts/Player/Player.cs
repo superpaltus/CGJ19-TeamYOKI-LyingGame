@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float moveSpeed;
 
     public GameObject playerBullet;
+    public GameObject playerBulletRailGun;
     [Range(0f,1f)]
     public float bulletSpeed = 0.5f;
 
@@ -37,8 +38,14 @@ public class Player : MonoBehaviour
     const float PISTOL_BULLETS_LIFE_TIME = 3f;
     const float SHOTGUN_BULLETS_LIFE_TIME = .3f;
     const float RAILGUN_BULLETS_LIFE_TIME = .3f;
-    const float MACHINEGUN_BULLETS_LIFE_TIME = 2f;
+    const float MACHINEGUN_BULLETS_LIFE_TIME = .75f;
 
+    public int ammo = 5;
+    public int fullAmmo = 5;
+    public float reloadWeaponTime = 3f;
+
+    private bool isMachinegunAttacking = false;
+    private bool isWeaponReloading = false;
 
 
     // ===UNITY FUNCTIONS===
@@ -66,6 +73,8 @@ public class Player : MonoBehaviour
 
     void CheckForAttack()
     {
+        if (isWeaponReloading) return;
+
         if (Input.GetButtonDown("Shoot"))
         {
             Vector2 shootDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
@@ -79,21 +88,43 @@ public class Player : MonoBehaviour
                 ShotgunAttack(shootDirection);
                 return;
             }
-            if (myWeapon == Weapon.MachineGun)
-            {
-                PistolAttack(shootDirection);
-                return;
-            }
             if (myWeapon == Weapon.RailGun)
             {
-                PistolAttack(shootDirection);
+                RailgunAttack(shootDirection);
+                return;
+            }
+        }
+        if (Input.GetButton("Shoot"))
+        {
+            if (myWeapon == Weapon.MachineGun)
+            {
+                Vector2 shootDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+                MachinegunAttack(shootDirection);
                 return;
             }
         }
     }
+    
+    void DecreaseAmmo()
+    {
+        ammo--;
+        if (ammo == 0)
+        {
+            isWeaponReloading = true;
+            StartCoroutine(ReloadingWeapon());
+        }
+    }
+
+    IEnumerator ReloadingWeapon()
+    {
+        yield return new WaitForSeconds(reloadWeaponTime);
+        ammo = fullAmmo;
+        isWeaponReloading = false;
+    }
 
     void PistolAttack(Vector2 _dir)
     {
+        DecreaseAmmo();
         GameObject _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0)*1.5f + transform.position), Quaternion.identity);
         Bullet _bulletProp = _bullet.GetComponent<Bullet>();
         _bulletProp.bulletLifeTime = PISTOL_BULLETS_LIFE_TIME;
@@ -102,6 +133,7 @@ public class Player : MonoBehaviour
     }
     void ShotgunAttack(Vector2 _dir)
     {
+        DecreaseAmmo();
         for (int i = 0; i < 5; i++)
         {
             Vector2 offset = new Vector2(Random.Range(-.2f, .2f), Random.Range(-.2f, .2f));
@@ -112,7 +144,46 @@ public class Player : MonoBehaviour
             GameManager.instance.ShakeCamera(2f, 5);
         }
     }
+    void MachinegunAttack(Vector2 _dir)
+    {
+        if (!isMachinegunAttacking)
+        {
+            DecreaseAmmo();
+            StartCoroutine(MachinegunAttacking(_dir));
+            GameManager.instance.ShakeCamera(2f, 5);
+        }
+    }
 
+    IEnumerator MachinegunAttacking(Vector2 _dir)
+    {
+        isMachinegunAttacking = true;
+        GameObject _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0) * 1.5f + transform.position), Quaternion.identity);
+        Bullet _bulletProp = _bullet.GetComponent<Bullet>();
+        _bulletProp.bulletLifeTime = MACHINEGUN_BULLETS_LIFE_TIME;
+        _bulletProp.targetDir = _dir.normalized * bulletSpeed;
+        yield return null;
+        _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0) * 1.5f + transform.position), Quaternion.identity);
+        _bulletProp = _bullet.GetComponent<Bullet>();
+        _bulletProp.bulletLifeTime = MACHINEGUN_BULLETS_LIFE_TIME;
+        _bulletProp.targetDir = _dir.normalized * bulletSpeed;
+        yield return null;
+        _bullet = Instantiate(playerBullet, (new Vector3(_dir.x, _dir.y, 0) * 1.5f + transform.position), Quaternion.identity);
+        _bulletProp = _bullet.GetComponent<Bullet>();
+        _bulletProp.bulletLifeTime = MACHINEGUN_BULLETS_LIFE_TIME;
+        _bulletProp.targetDir = _dir.normalized * bulletSpeed;
+        yield return new WaitForSeconds(.3f);
+        isMachinegunAttacking = false;
+    }
+
+    void RailgunAttack(Vector2 _dir)
+    {
+        DecreaseAmmo();
+        GameObject _bullet = Instantiate(playerBulletRailGun, (new Vector3(_dir.x, _dir.y, 0) * 1.5f + transform.position), Quaternion.identity);
+        Bullet _bulletProp = _bullet.GetComponent<Bullet>();
+        _bulletProp.bulletLifeTime = PISTOL_BULLETS_LIFE_TIME;
+        _bulletProp.targetDir = _dir.normalized * bulletSpeed * 3;
+        GameManager.instance.ShakeCamera(2f, 5);
+    }
 
     void UpdateMovement()
     {
