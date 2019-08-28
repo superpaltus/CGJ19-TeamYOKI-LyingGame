@@ -35,6 +35,9 @@ public class TurretAI : MonoBehaviour
 
     void Shoot() {
         GameObject _bul = Instantiate(bullet, transform.position, transform.rotation);
+        Vector2 lookDirection = target.gameObject.transform.position - transform.position;
+        lookDirection.Normalize();
+        _bul.gameObject.GetComponent<Rigidbody2D>().AddForce(lookDirection * force);
     }
 
 
