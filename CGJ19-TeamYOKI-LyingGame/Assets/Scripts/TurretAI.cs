@@ -15,6 +15,7 @@ public class TurretAI : MonoBehaviour
     public bool playerSight = false;
 
     public float shotTimer;
+    public float force = 300.0f;
 
     void Update()
     {
