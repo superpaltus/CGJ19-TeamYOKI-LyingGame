@@ -13,11 +13,16 @@ public class Player : MonoBehaviour
 
     public float moveSpeed;
 
+    public static int health = 3;
+    public static int maxHealth = 3;
+
     public GameObject playerBullet;
     public GameObject playerBulletRailGun;
     public GameObject playerGrenade;
     [Range(0f,1f)]
     public float bulletSpeed = 0.5f;
+
+    public static int currentDamage;
 
     float inputX, inputY;
     float lastMoveX, lastMoveY;
@@ -76,6 +81,39 @@ public class Player : MonoBehaviour
 
 
     // ===OTHER FUNCTIONS===
+
+
+    void Die() {
+
+        Debug.Log("Player has died.");
+
+    }
+
+    public void ChangeHealth(int _change)
+    {
+        if (health + _change > maxHealth)
+        {
+            health = maxHealth;
+        }
+        else if (health + _change <= 0)
+        {
+            health = 0;
+            Die();
+        }
+        else
+        {
+            health += _change;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
+        {
+            ChangeHealth(-1);
+            Destroy(collision.gameObject);
+        }
+    }
 
     void CheckForAbilityUse()
     {

@@ -30,6 +30,22 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
         {
             Destroy(gameObject);
+        } else if(collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+        {
+            collision.transform.GetComponent<EntityHurtable>().OnEntityHit();
+            Destroy(gameObject);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+        {
+            collision.transform.GetComponent<EntityHurtable>().OnEntityHit();
+            Destroy(gameObject);
         }
     }
 }
