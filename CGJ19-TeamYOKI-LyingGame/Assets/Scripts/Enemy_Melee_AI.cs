@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Enemy_Melee_AI : MonoBehaviour
 {
-    public Transform player;
-    public float speed;
+    public Transform target;
+    public float walkSpeed;
+    public float runSpeed;
     public float viewRange;
     public int maxWalkDist;
     public LayerMask blockingLayer;
@@ -41,7 +42,7 @@ public class Enemy_Melee_AI : MonoBehaviour
 
     bool DetectPlayer()
     {
-        float dist = Vector3.Distance(player.position, transform.position);
+        float dist = Vector3.Distance(target.position, transform.position);
 
         if (dist <= viewRange)
         {
@@ -91,7 +92,7 @@ public class Enemy_Melee_AI : MonoBehaviour
             return;
         }
 
-        Vector3 newPosition = Vector3.MoveTowards(rb2D.position, end, speed * Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(rb2D.position, end, walkSpeed * Time.deltaTime);
         rb2D.MovePosition(newPosition);
     }
 
@@ -99,7 +100,7 @@ public class Enemy_Melee_AI : MonoBehaviour
     {
         isMoving = false;
         elapsedTime = 0f;
-        Vector3 newPosition = Vector3.MoveTowards(rb2D.position, player.position, speed * Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(rb2D.position, target.position, runSpeed * Time.deltaTime);
         rb2D.MovePosition(newPosition);
     }
 }
