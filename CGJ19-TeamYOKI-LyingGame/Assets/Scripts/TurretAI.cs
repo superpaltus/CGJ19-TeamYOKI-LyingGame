@@ -35,7 +35,13 @@ public class TurretAI : MonoBehaviour
     }
 
     void Shoot() {
-        GameObject _bul = Instantiate(bullet, transform.position, transform.rotation);
+        Vector3 targ = target.transform.position;
+        targ.x = targ.x - transform.position.x;
+        targ.y = targ.y - transform.position.y;
+        float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        GameObject _bul = Instantiate(bullet, transform.position, rotation);
         Vector2 lookDirection = target.gameObject.transform.position - transform.position;
         lookDirection.Normalize();
         _bul.gameObject.GetComponent<Rigidbody2D>().AddForce(lookDirection * force);
