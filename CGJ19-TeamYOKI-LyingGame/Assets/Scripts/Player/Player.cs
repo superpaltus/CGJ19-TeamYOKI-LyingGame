@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         CheckForAbilityUse();
         UpdateHUD();
 
-        Debug.Log(reloadWeaponTime - reloadTimer);
+        //Debug.Log(reloadWeaponTime - reloadTimer);
         if(reloadTimer > 0)
         {
             transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = (reloadWeaponTime - reloadTimer) / reloadWeaponTime;

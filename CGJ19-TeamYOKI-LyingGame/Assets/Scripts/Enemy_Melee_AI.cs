@@ -21,6 +21,8 @@ public class Enemy_Melee_AI : MonoBehaviour
     float waitTime = 2f;
     static float elapsedTime = 0f;
     bool isMoving = false;
+    static bool damageDone = false;
+    static float cooldown = 0f;
 
     void Start()
     {
@@ -35,6 +37,15 @@ public class Enemy_Melee_AI : MonoBehaviour
 
     void Update()
     {
+        if (damageDone)
+        {
+            if(cooldown <= 0f)
+                damageDone = false;
+            else
+                cooldown -= Time.deltaTime;
+            return;
+        }
+
         if (DetectPlayer())
         {
             Move();
@@ -48,6 +59,12 @@ public class Enemy_Melee_AI : MonoBehaviour
     bool DetectPlayer()
     {
         float dist = Vector3.Distance(target.position, transform.position);
+
+        if (dist < 1f)
+        {
+            DoDamage();
+            return false;
+        }
 
         if (dist <= viewRange)
         {
@@ -106,5 +123,16 @@ public class Enemy_Melee_AI : MonoBehaviour
         elapsedTime = 0f;
         Vector3 newPosition = Vector3.MoveTowards(rb2D.position, target.position, runSpeed * Time.deltaTime);
         rb2D.MovePosition(newPosition);
+    }
+
+    void DoDamage()
+    {
+        target.GetComponent<Player>().ChangeHealth(-1);
+
+        Vector2 moveDirection = transform.position - target.transform.position;
+        target.GetComponent<Rigidbody2D>().AddForce(moveDirection.normalized * -10000f);
+
+        damageDone = true;
+        cooldown = 0.5f;
     }
 }
