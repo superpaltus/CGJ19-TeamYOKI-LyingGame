@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class EnemySpawnerParent : MonoBehaviour
 {
-    //private List<EnemySpawner> childes = new List<EnemySpawner>();
+    public static EnemySpawnerParent instance;
 
-    //private void Start()
-    //{
-    //    foreach (EnemySpawner child in GetComponentsInChildren<EnemySpawner>())
-    //    {
-    //        childes.Add(child);
-    //    }
-    //}
+    public Transform enemyContainer;
+    public bool canSpawn = true;
 
-    //private void Update()
-    //{
-    //    ReloadSpawnerByPressingKey();
-    //}
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
-    //private void ReloadAllSpawners()
-    //{
-    //    foreach (EnemySpawner spawner in childes)
-    //    {
-    //        spawner.ReloadSpawner();
-    //    }
-    //}
+    public void DestroyAllEnemies()
+    {
+        canSpawn = false;
 
-    //// debug methods below
-    //private void ReloadSpawnerByPressingKey()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.P))
-    //    {
-    //        ReloadAllSpawners();
-    //    }
-    //}
+        for (int i = 0; i < enemyContainer.childCount; i++)
+        {
+            print("destroying");
+            Destroy(enemyContainer.GetChild(i).gameObject);
+        }
+    }
 }

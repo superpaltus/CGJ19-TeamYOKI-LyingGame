@@ -17,7 +17,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        SpawnTimerDecrease();
+        if (EnemySpawnerParent.instance.canSpawn)
+        {
+            SpawnTimerDecrease();
+        }
     }
 
     private void SpawnTimerDecrease()

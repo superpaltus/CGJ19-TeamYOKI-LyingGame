@@ -73,10 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ce7121b06f3ad4889c651018ca427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyContainer: {fileID: 5644796977378471498}
   enemyPrefabs:
   - {fileID: 5433292743333731510, guid: 1cc12b78002920d42837baab130bb2d3, type: 3}
   spawnTime: 1
-  numberOfSpawnedEnemiesPerWave: 3
 --- !u!1 &7543329928898081890
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3add36afbde344448c8a6917cbeaf0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyContainer: {fileID: 5644796977378471498}
+  canSpawn: 1
 --- !u!1 &7543329929395090777
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,10 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ce7121b06f3ad4889c651018ca427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyContainer: {fileID: 5644796977378471498}
   enemyPrefabs:
   - {fileID: 5433292743333731510, guid: 1cc12b78002920d42837baab130bb2d3, type: 3}
   spawnTime: 1
-  numberOfSpawnedEnemiesPerWave: 3
 --- !u!1 &7543329929950532828
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,10 +217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ce7121b06f3ad4889c651018ca427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyContainer: {fileID: 5644796977378471498}
   enemyPrefabs:
   - {fileID: 5433292743333731510, guid: 1cc12b78002920d42837baab130bb2d3, type: 3}
   spawnTime: 1
-  numberOfSpawnedEnemiesPerWave: 3
 --- !u!1 &7543329930394282535
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ce7121b06f3ad4889c651018ca427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyContainer: {fileID: 5644796977378471498}
   enemyPrefabs:
   - {fileID: 5433292743333731510, guid: 1cc12b78002920d42837baab130bb2d3, type: 3}
   spawnTime: 1
-  numberOfSpawnedEnemiesPerWave: 3
