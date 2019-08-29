@@ -15,7 +15,7 @@ public class ParticleManager : MonoBehaviour
         }
     }
 
-    public void Create(string _name, Vector3 _position, Quaternion _rotation)
+    public void Create(string _name, Vector3 _position, Quaternion _rotation, Transform _parent = null)
     {
         Particle p = Array.Find(particles, item => item.name == _name);
         if (p == null)
@@ -23,8 +23,14 @@ public class ParticleManager : MonoBehaviour
             Debug.LogWarning("Particle: " + _name + " not found!");
             return;
         }
-
-        Instantiate(p.emitter, _position, _rotation);
+        if(_parent != null)
+        {
+            Instantiate(p.emitter, _position, _rotation, _parent);
+        } else
+        {
+            Instantiate(p.emitter, _position, _rotation);
+        }
+        
 
     }
 

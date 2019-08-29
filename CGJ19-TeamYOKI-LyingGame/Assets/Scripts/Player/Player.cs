@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
 
     public static int health = 3;
     public static int maxHealth = 3;
+
+    public GameObject hudCanvas;
 
     public GameObject playerBullet;
     public GameObject playerBulletRailGun;
@@ -48,7 +51,8 @@ public class Player : MonoBehaviour
 
     public int ammo = 5;
     public int fullAmmo = 5;
-    public float reloadWeaponTime = 3f;
+    public float reloadWeaponTime = 2f;
+    public float reloadTimer = 0;
 
     private bool isMachinegunAttacking = false;
     private bool isWeaponReloading = false;
@@ -75,12 +79,31 @@ public class Player : MonoBehaviour
         RigidMove();
         CheckForAttack();
         CheckForAbilityUse();
+        UpdateHUD();
+
+        Debug.Log(reloadWeaponTime - reloadTimer);
+        if(reloadTimer > 0)
+        {
+            transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = (reloadWeaponTime - reloadTimer) / reloadWeaponTime;
+            reloadTimer -= Time.deltaTime;
+        } else if(reloadTimer < 0)
+        {
+            reloadTimer = 0;
+        }
+
     }
 
 
 
 
     // ===OTHER FUNCTIONS===
+
+
+
+    void UpdateHUD()
+    {
+        hudCanvas.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = ((float)ammo / (float)fullAmmo);
+    }
 
 
     void Die() {
@@ -143,11 +166,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             isWeaponReloading = true;
+            transform.GetChild(2).GetComponent<CanvasGroup>().alpha = 1;
             StartCoroutine(ReloadingWeapon());
         }
 
         if (Input.GetButtonDown("Shoot"))
         {
+            ParticleManager.instance.Create("gun", transform.GetChild(0).position, Quaternion.identity, transform.GetChild(0));
             Vector2 shootDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
             if (myWeapon == Weapon.Pistol)
             {
@@ -179,17 +204,21 @@ public class Player : MonoBehaviour
     void DecreaseAmmo()
     {
         ammo--;
+        hudCanvas.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = ammo / fullAmmo;
         if (ammo == 0)
         {
             isWeaponReloading = true;
+            transform.GetChild(2).GetComponent<CanvasGroup>().alpha = 1;
             StartCoroutine(ReloadingWeapon());
         }
     }
 
     IEnumerator ReloadingWeapon()
     {
+        reloadTimer = reloadWeaponTime;
         yield return new WaitForSeconds(reloadWeaponTime);
         ammo = fullAmmo;
+        transform.GetChild(2).GetComponent<CanvasGroup>().alpha = 0;
         isWeaponReloading = false;
     }
 

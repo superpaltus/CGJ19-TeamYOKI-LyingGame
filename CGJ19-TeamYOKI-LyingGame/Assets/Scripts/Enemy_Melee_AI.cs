@@ -26,6 +26,11 @@ public class Enemy_Melee_AI : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         rb2D = GetComponent<Rigidbody2D>();
+
+        if(target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     void Update()
@@ -75,7 +80,6 @@ public class Enemy_Melee_AI : MonoBehaviour
                 int yDir = Random.Range(-maxWalkDist, maxWalkDist);
                 end = start + new Vector2(xDir, yDir);
                 hit = Physics2D.Linecast(start, end, blockingLayer);
-                Debug.Log("movement done!");
             }
             while (hit.transform != null);
 

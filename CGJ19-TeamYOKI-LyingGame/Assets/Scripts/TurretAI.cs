@@ -17,12 +17,23 @@ public class TurretAI : MonoBehaviour
     public float shotTimer;
     public float force = 300.0f;
 
+
+
+
+    void Start()
+    {
+        if(target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
+
     void Update()
     {
         if(playerSight)
         {
             shotTimer += Time.deltaTime;
-            if(shotTimer >= 0.5f)
+            if(shotTimer >= 0.25f)
             {
                 Shoot();
                 shotTimer = 0;

@@ -23,6 +23,11 @@ public class EnemyBullet : MonoBehaviour
 
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {
